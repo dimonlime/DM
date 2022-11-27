@@ -21,8 +21,12 @@ public class Main {
             System.out.println();
         }
         System.out.println(determinantOfMatrix(A, n));
+        File file1 = new File("output.txt");
+        PrintWriter pw = new PrintWriter(file1);
+        pw.println(determinantOfMatrix(A, n));
+        pw.close();
     }
-    
+
     private static void getCofactor(int[][] mat, int[][] temp, int p, int q, int n) {
         int i = 0, j = 0;
 
